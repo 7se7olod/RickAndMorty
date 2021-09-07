@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4F673926E613B2005B216E /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F673826E613B2005B216E /* PageVC.swift */; };
+		2D4F673C26E613FE005B216E /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F673B26E613FE005B216E /* ImageVC.swift */; };
 		2DD544EB26E12DAB00262BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD544EA26E12DAB00262BDA /* AppDelegate.swift */; };
 		2DD544ED26E12DAB00262BDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD544EC26E12DAB00262BDA /* SceneDelegate.swift */; };
-		2DD544EF26E12DAB00262BDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD544EE26E12DAB00262BDA /* ViewController.swift */; };
+		2DD544EF26E12DAB00262BDA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD544EE26E12DAB00262BDA /* WelcomeViewController.swift */; };
 		2DD544F226E12DAB00262BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD544F026E12DAB00262BDA /* Main.storyboard */; };
 		2DD544F526E12DAB00262BDA /* RickAndMorty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DD544F326E12DAB00262BDA /* RickAndMorty.xcdatamodeld */; };
 		2DD544F726E12DB000262BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD544F626E12DB000262BDA /* Assets.xcassets */; };
@@ -18,10 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D4F673826E613B2005B216E /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		2D4F673B26E613FE005B216E /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		2DD544E726E12DAB00262BDA /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD544EA26E12DAB00262BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DD544EC26E12DAB00262BDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2DD544EE26E12DAB00262BDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DD544EE26E12DAB00262BDA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2DD544F126E12DAB00262BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DD544F426E12DAB00262BDA /* RickAndMorty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RickAndMorty.xcdatamodel; sourceTree = "<group>"; };
 		2DD544F626E12DB000262BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,10 +71,12 @@
 			children = (
 				2DD544EA26E12DAB00262BDA /* AppDelegate.swift */,
 				2DD544EC26E12DAB00262BDA /* SceneDelegate.swift */,
-				2DD544EE26E12DAB00262BDA /* ViewController.swift */,
+				2DD544EE26E12DAB00262BDA /* WelcomeViewController.swift */,
+				2D4F673B26E613FE005B216E /* ImageVC.swift */,
+				2D4F673826E613B2005B216E /* PageVC.swift */,
 				2DD544F026E12DAB00262BDA /* Main.storyboard */,
-				2DD544F626E12DB000262BDA /* Assets.xcassets */,
 				2DD544F826E12DB000262BDA /* LaunchScreen.storyboard */,
+				2DD544F626E12DB000262BDA /* Assets.xcassets */,
 				2DD544FB26E12DB000262BDA /* Info.plist */,
 				2DD544F326E12DAB00262BDA /* RickAndMorty.xcdatamodeld */,
 			);
@@ -210,7 +216,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD544F526E12DAB00262BDA /* RickAndMorty.xcdatamodeld in Sources */,
-				2DD544EF26E12DAB00262BDA /* ViewController.swift in Sources */,
+				2D4F673926E613B2005B216E /* PageVC.swift in Sources */,
+				2D4F673C26E613FE005B216E /* ImageVC.swift in Sources */,
+				2DD544EF26E12DAB00262BDA /* WelcomeViewController.swift in Sources */,
 				2DD544EB26E12DAB00262BDA /* AppDelegate.swift in Sources */,
 				2DD544ED26E12DAB00262BDA /* SceneDelegate.swift in Sources */,
 			);
@@ -370,7 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.7se7olod.RickAndMorty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -390,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.7se7olod.RickAndMorty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
