@@ -56,8 +56,16 @@
 			isa = PBXGroup;
 			children = (
 				2D9FD07726EF7BE300335B7B /* Authorization.swift */,
+				2DFD95A926F0E485000B3CA3 /* TableVC.swift */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		2D83356226F2625000D0A578 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2D9FD06826EF673700335B7B /* Present */ = {
@@ -74,7 +82,6 @@
 			children = (
 				2D71662D26EF7DDB00D298DC /* Authorization */,
 				2D9FD07526EF7B4300335B7B /* Welcome Screen */,
-				2DFD95A926F0E485000B3CA3 /* TableVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,10 +117,11 @@
 		2DD544E926E12DAB00262BDA /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
-				2DD544EA26E12DAB00262BDA /* AppDelegate.swift */,
-				2DD544EC26E12DAB00262BDA /* SceneDelegate.swift */,
+				2D83356226F2625000D0A578 /* Model */,
 				2D9FD06926EF67BB00335B7B /* View */,
 				2D9FD06826EF673700335B7B /* Present */,
+				2DD544EA26E12DAB00262BDA /* AppDelegate.swift */,
+				2DD544EC26E12DAB00262BDA /* SceneDelegate.swift */,
 				2DD544F626E12DB000262BDA /* Assets.xcassets */,
 				2DD544FB26E12DB000262BDA /* Info.plist */,
 				2DD544F326E12DAB00262BDA /* RickAndMorty.xcdatamodeld */,

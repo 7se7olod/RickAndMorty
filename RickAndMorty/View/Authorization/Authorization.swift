@@ -21,16 +21,19 @@ class Authorization: UIViewController {
     passwordTF.delegate = self
     showPasswordButtonSetting()
     passwordFieldButton()
+    drawingBottomLine()
+  }
+  func drawingBottomLine() {
     let bottomLinePassword = CALayer()
     let stackViewPswrdHeight = stackViewPassword.frame.height
     let stackViewPswrdWidth = stackViewPassword.frame.width
-    bottomLinePassword.frame = CGRect(x: 0.0, y: stackViewPswrdHeight, width: stackViewPswrdWidth, height: 1.0)
+    bottomLinePassword.frame = CGRect(x: 0.0, y: stackViewPswrdHeight, width: stackViewPswrdWidth, height: 0.5)
     bottomLinePassword.backgroundColor = UIColor.gray.cgColor
     stackViewPassword.layer.addSublayer(bottomLinePassword)
     let bottomLineLogin = CALayer()
     let stackViewLoginHeight = stackViewLogin.frame.height
     let stackViewLoginWidth = stackViewLogin.frame.width
-    bottomLineLogin.frame = CGRect(x: 0.0, y: stackViewLoginHeight, width: stackViewLoginWidth, height: 1.0)
+    bottomLineLogin.frame = CGRect(x: 0.0, y: stackViewLoginHeight, width: stackViewLoginWidth, height: 0.5)
     bottomLineLogin.backgroundColor = UIColor.gray.cgColor
     stackViewLogin.layer.addSublayer(bottomLineLogin)
   }
