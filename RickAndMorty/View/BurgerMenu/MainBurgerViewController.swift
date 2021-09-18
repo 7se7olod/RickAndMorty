@@ -10,7 +10,7 @@ class MainBurgerViewController: UIViewController {
     super.viewDidLoad()
     imageView.layer.cornerRadius = imageView.frame.size.width / 2
     burgerView.alpha = 1
-    showCharactern()
+    showTabBarController()
   }
   @IBAction func menuBurger(_ sender: Any) {
     showBurgerMenu()
@@ -18,17 +18,25 @@ class MainBurgerViewController: UIViewController {
   @IBAction func characterButton(_ sender: Any) {
     showCharactern()
   }
+  func showTabBarController() {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    guard let tabBar = storyboard.instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
+    burgerView.insertSubview(tabBar.view, at: 0)
+    showBurgerMenu()
+    navigationItem.title = "Menu"
+  }
   func showCharactern() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     guard let mainVC = storyboard.instantiateViewController(
             identifier: "MenuViewController") as? MenuViewController else { return }
-    burgerView.insertSubview(mainVC.view, at: 0)
+    burgerView.insertSubview(mainVC.view, at: 1)
     showBurgerMenu()
-    navigationController?.title = "Character"
+    navigationItem.title = "Character"
   }
   func showBurgerMenu() {
     if !hamburgerMenuVisible {
       leadingBurgerViewConstraint.constant = stackView.frame.width
+
       hamburgerMenuVisible = true
     } else {
       leadingBurgerViewConstraint.constant = 0
