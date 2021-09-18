@@ -1,6 +1,7 @@
 import UIKit
 
 class Authorization: UIViewController {
+  var window: UIWindow?
   private let fakeEnter = "Test"
   var rightButton = UIButton(type: .custom)
   let showPasswordButton = UIButton(type: .custom)
@@ -46,8 +47,10 @@ class Authorization: UIViewController {
       passwordTF.textColor = .red
       return
     }
-    performSegue(withIdentifier: "LoginToTableView", sender: self)
-    }
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let mainBurgerVC = storyboard.instantiateViewController(identifier: "NavigationController")
+    present(mainBurgerVC, animated: true)
+  }
 
   func showPasswordButtonSetting() {
     showPasswordButton.setImage(showPasswordImage, for: .normal)
