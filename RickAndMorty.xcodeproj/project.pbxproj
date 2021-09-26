@@ -12,6 +12,10 @@
 		2D79672826F5E8E900B74419 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79672726F5E8E900B74419 /* MenuViewController.swift */; };
 		2D9FD07826EF7BE300335B7B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FD07726EF7BE300335B7B /* Authorization.swift */; };
 		2DA72AD826F6621900A532FA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72AD726F6621900A532FA /* TabBarController.swift */; };
+		2DA72ADB26F730C100A532FA /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72ADA26F730C100A532FA /* CharacterViewController.swift */; };
+		2DA72ADE26F7310C00A532FA /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72ADD26F7310C00A532FA /* LocationViewController.swift */; };
+		2DC4CB232700901A00C42411 /* PageControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4CB222700901A00C42411 /* PageControll.swift */; };
+		2DC4CB2A2700931B00C42411 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4CB292700931B00C42411 /* Text.swift */; };
 		2DD544EB26E12DAB00262BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD544EA26E12DAB00262BDA /* AppDelegate.swift */; };
 		2DD544ED26E12DAB00262BDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD544EC26E12DAB00262BDA /* SceneDelegate.swift */; };
 		2DD544EF26E12DAB00262BDA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD544EE26E12DAB00262BDA /* WelcomeViewController.swift */; };
@@ -29,6 +33,10 @@
 		2D79672726F5E8E900B74419 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2D9FD07726EF7BE300335B7B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		2DA72AD726F6621900A532FA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		2DA72ADA26F730C100A532FA /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		2DA72ADD26F7310C00A532FA /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		2DC4CB222700901A00C42411 /* PageControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControll.swift; sourceTree = "<group>"; };
+		2DC4CB292700931B00C42411 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		2DD544E726E12DAB00262BDA /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD544EA26E12DAB00262BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DD544EC26E12DAB00262BDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,11 +94,21 @@
 		2D9FD07526EF7B4300335B7B /* Welcome Screen */ = {
 			isa = PBXGroup;
 			children = (
+				2DC4CB252700901F00C42411 /* Extensions */,
 				2DD544EE26E12DAB00262BDA /* WelcomeViewController.swift */,
 				2D4F673B26E613FE005B216E /* ImageVC.swift */,
 				2D4F673826E613B2005B216E /* PageVC.swift */,
 			);
 			path = "Welcome Screen";
+			sourceTree = "<group>";
+		};
+		2DC4CB252700901F00C42411 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DC4CB222700901A00C42411 /* PageControll.swift */,
+				2DC4CB292700931B00C42411 /* Text.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2DD544DE26E12DAB00262BDA = {
@@ -130,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				2DD7704626F3624500248941 /* MainBurgerViewController.swift */,
+				2DA72ADD26F7310C00A532FA /* LocationViewController.swift */,
+				2DA72ADA26F730C100A532FA /* CharacterViewController.swift */,
 				2DA72AD726F6621900A532FA /* TabBarController.swift */,
 				2D79672726F5E8E900B74419 /* MenuViewController.swift */,
 			);
@@ -275,13 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA72ADB26F730C100A532FA /* CharacterViewController.swift in Sources */,
 				2DD544F526E12DAB00262BDA /* RickAndMorty.xcdatamodeld in Sources */,
 				2DD7704726F3624600248941 /* MainBurgerViewController.swift in Sources */,
+				2DA72ADE26F7310C00A532FA /* LocationViewController.swift in Sources */,
+				2DC4CB232700901A00C42411 /* PageControll.swift in Sources */,
 				2D4F673926E613B2005B216E /* PageVC.swift in Sources */,
 				2DA72AD826F6621900A532FA /* TabBarController.swift in Sources */,
 				2D4F673C26E613FE005B216E /* ImageVC.swift in Sources */,
 				2D79672826F5E8E900B74419 /* MenuViewController.swift in Sources */,
 				2DD544EF26E12DAB00262BDA /* WelcomeViewController.swift in Sources */,
+				2DC4CB2A2700931B00C42411 /* Text.swift in Sources */,
 				2DD544EB26E12DAB00262BDA /* AppDelegate.swift in Sources */,
 				2D9FD07826EF7BE300335B7B /* Authorization.swift in Sources */,
 				2DD544ED26E12DAB00262BDA /* SceneDelegate.swift in Sources */,

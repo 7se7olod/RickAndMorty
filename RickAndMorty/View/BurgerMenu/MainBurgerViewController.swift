@@ -10,7 +10,7 @@ class MainBurgerViewController: UIViewController {
     super.viewDidLoad()
     imageView.layer.cornerRadius = imageView.frame.size.width / 2
     burgerView.alpha = 1
-    showTabBarController()
+    showBurgerMenu()
   }
   @IBAction func menuBurger(_ sender: Any) {
     showBurgerMenu()
@@ -18,25 +18,30 @@ class MainBurgerViewController: UIViewController {
   @IBAction func characterButton(_ sender: Any) {
     showCharactern()
   }
-  func showTabBarController() {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    guard let tabBar = storyboard.instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
-    burgerView.insertSubview(tabBar.view, at: 0)
-    showBurgerMenu()
-    navigationItem.title = "Menu"
+  @IBAction func locationButton(_ sender: UIButton) {
+    showLocation()
   }
   func showCharactern() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    guard let mainVC = storyboard.instantiateViewController(
-            identifier: "MenuViewController") as? MenuViewController else { return }
-    burgerView.insertSubview(mainVC.view, at: 1)
+    guard let tabBar = storyboard.instantiateViewController(identifier: "CharacterVC") as?
+    CharacterViewController else { return }
+    burgerView.addSubview(tabBar.view)
     showBurgerMenu()
+    tabBar.view.backgroundColor = .orange
     navigationItem.title = "Character"
+  }
+  func showLocation() {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    guard let tabBar = storyboard.instantiateViewController(identifier: "Location") as?
+    LocationViewController else { return }
+    burgerView.addSubview(tabBar.view)
+    showBurgerMenu()
+    tabBar.view.backgroundColor = .blue
+    navigationItem.title = "Location"
   }
   func showBurgerMenu() {
     if !hamburgerMenuVisible {
       leadingBurgerViewConstraint.constant = stackView.frame.width
-
       hamburgerMenuVisible = true
     } else {
       leadingBurgerViewConstraint.constant = 0

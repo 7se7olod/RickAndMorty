@@ -42,7 +42,7 @@
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="veg-dp-f9R" firstAttribute="centerX" secondItem="qfd-eE-8R2" secondAttribute="centerX" id="7If-Ss-6iA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JOl-Gm-gmm" secondAttribute="bottom" constant="13" id="7dc-Kc-NAU"/>
@@ -142,22 +142,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="fae-Hc-t88">
-                                <rect key="frame" x="77" y="124" width="259" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="2d4-7X-uow"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2d4-7X-uow"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="2d4-7X-uow"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="hJu-Ki-pYM">
                                 <rect key="frame" x="-8" y="421.5" width="430" height="63.5"/>
                                 <subviews>
@@ -307,6 +291,30 @@
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=compact" alignment="center" axis="vertical" spacing="33"/>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="fae-Hc-t88">
+                                <rect key="frame" x="77" y="124" width="259" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="2d4-7X-uow"/>
+                                    <constraint firstAttribute="width" constant="257" id="7tz-wq-rHq"/>
+                                    <constraint firstAttribute="height" constant="111" id="YGc-tc-JUH"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2d4-7X-uow"/>
+                                        <exclude reference="7tz-wq-rHq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2d4-7X-uow"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="7tz-wq-rHq"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1ox-Dr-AbE"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -409,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vuw-Gf-Qzo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957" y="99"/>
+            <point key="canvasLocation" x="956.25" y="97.101449275362327"/>
         </scene>
         <!--Main Burger View Controller-->
         <scene sceneID="rKD-gl-fHq">
@@ -483,6 +491,9 @@
                                                 <state key="normal" title="Locations">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="locationButton:" destination="qB2-ZJ-qbR" eventType="touchUpInside" id="CVV-FM-oj7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU5-bJ-x9c">
                                                 <rect key="frame" x="0.0" y="159" width="324" height="33"/>
@@ -597,45 +608,17 @@
                         <outlet property="imageView" destination="cdj-hV-uxF" id="h8W-6N-Opv"/>
                         <outlet property="leadingBurgerViewConstraint" destination="Spf-ye-EEq" id="gvu-dB-zUx"/>
                         <outlet property="stackView" destination="dxR-0K-80s" id="92k-oU-Vj7"/>
+                        <segue destination="Xd1-PJ-cVv" kind="show" identifier="ToTabBar" id="zzD-2E-irI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n69-TX-Wrg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690" y="98"/>
+            <point key="canvasLocation" x="2689.8550724637685" y="97.767857142857139"/>
         </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="L7Z-xZ-uqi">
-            <objects>
-                <tableViewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9UC-Sa-nZp" customClass="MenuViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PPR-Oz-KSq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7Mb-pR-JAs">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Mb-pR-JAs" id="jNS-2w-ZXM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="9UC-Sa-nZp" id="GkD-s7-hXz"/>
-                            <outlet property="delegate" destination="9UC-Sa-nZp" id="H4t-lJ-bCV"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kJM-Nx-JWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3377" y="98"/>
-        </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="QJ9-Bz-WhH">
             <objects>
-                <viewController id="xrx-gH-8lI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Location" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xrx-gH-8lI" customClass="LocationViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9XQ-cH-g6a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -650,10 +633,10 @@
             </objects>
             <point key="canvasLocation" x="3814" y="933"/>
         </scene>
-        <!--View Controller-->
+        <!--Character View Controller-->
         <scene sceneID="DPe-OL-3fd">
             <objects>
-                <viewController id="hbz-qo-aq5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharacterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hbz-qo-aq5" customClass="CharacterViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Tu-ZR-jdf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -671,7 +654,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="iyh-JS-Jal">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xd1-PJ-cVv" customClass="TabBarController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xd1-PJ-cVv" customClass="TabBarController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5nl-mF-m4x"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="P5f-FF-GYK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -707,26 +691,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="meW-cK-sb0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5An-tx-5tc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2V-Dq-di8">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U10-ao-mk1">
+                                        <rect key="frame" x="0.0" y="49" width="414" height="769"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">The Rick and Morty API is a REST(ish) and GraphQL API based on the television show Rick and Morty.
+You will have access to about hundreds of characters, images, locations and episodes.
+The Rick and Morty API is filled with canonical information as seen on the TV show.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8qF-3h-hKM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="meW-cK-sb0" firstAttribute="leading" secondItem="8qF-3h-hKM" secondAttribute="leading" id="Qw7-4I-ITP"/>
-                            <constraint firstItem="meW-cK-sb0" firstAttribute="centerY" secondItem="p2J-R5-Kkh" secondAttribute="centerY" id="Xb3-Ok-GSy"/>
-                            <constraint firstItem="meW-cK-sb0" firstAttribute="top" secondItem="p2J-R5-Kkh" secondAttribute="topMargin" constant="-44" id="gf6-ys-XeK"/>
-                            <constraint firstItem="8qF-3h-hKM" firstAttribute="trailing" secondItem="meW-cK-sb0" secondAttribute="trailing" id="jRd-wV-ydr"/>
+                            <constraint firstItem="5An-tx-5tc" firstAttribute="top" secondItem="8qF-3h-hKM" secondAttribute="top" id="7nH-xC-SyO"/>
+                            <constraint firstItem="5An-tx-5tc" firstAttribute="leading" secondItem="p2J-R5-Kkh" secondAttribute="leading" id="I9A-uo-OR3"/>
+                            <constraint firstItem="8qF-3h-hKM" firstAttribute="bottom" secondItem="5An-tx-5tc" secondAttribute="bottom" id="R7G-Hz-Nd0"/>
+                            <constraint firstItem="8qF-3h-hKM" firstAttribute="trailing" secondItem="5An-tx-5tc" secondAttribute="trailing" id="ljP-f3-QJG"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="showImage" destination="meW-cK-sb0" id="iyr-cM-qR1"/>
+                        <outlet property="descriptionText" destination="U10-ao-mk1" id="iec-tH-pDG"/>
+                        <outlet property="headerLabel" destination="g2V-Dq-di8" id="L0f-CF-qBz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5a-XO-Tzx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="-575"/>
+            <point key="canvasLocation" x="-591.304347826087" y="-575.22321428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mZz-Pn-MIj">
@@ -808,15 +812,21 @@
         <image name="character" width="24" height="24"/>
         <image name="episode" width="24" height="14"/>
         <image name="heart" width="24" height="23"/>
-        <image name="image 1" width="284" height="120"/>
+        <image name="image 1" width="1280" height="544"/>
         <image name="img1" width="1000" height="500"/>
         <image name="location" width="17" height="24"/>
         <image name="stat" width="20" height="20"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
