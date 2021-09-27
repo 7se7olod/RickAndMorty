@@ -3,14 +3,15 @@ import UIKit
 class ImageVC: UIViewController {
   @IBOutlet var headerLabel: UILabel!
   @IBOutlet var descriptionText: UITextView!
-  var ddd: UITextView?
-  var displayHeaderLabel: String?
-  var displayDescrLabel: String?
   var index: Int?
   override func viewDidLoad() {
     super.viewDidLoad()
-    headerLabel.text = displayHeaderLabel
-    descriptionText.text = displayDescrLabel
+    if index != nil {
+      headerLabel.text = headerText[index ?? 0]
+      descriptionText.addHyperLinksToText(
+        originalText: fullDescriptionText[index ?? 0],
+        hyperLinks: hyperLinks[index ?? 0])
+    }
     view.layer.cornerRadius = 10
   }
 }

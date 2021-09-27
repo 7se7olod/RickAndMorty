@@ -46,8 +46,6 @@ func startPresentation() {
     if index >= headerText.count || headerText.isEmpty || index < 0 { return nil }
     guard let imageVC = storyboard?.instantiateViewController(
     identifier: String(describing: ImageVC.self)) as? ImageVC else { return nil }
-    imageVC.displayHeaderLabel = headerText[index]
-    imageVC.displayDescrLabel = descText[index]
     imageVC.index = index
     return imageVC
   }

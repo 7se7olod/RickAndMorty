@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D4F673926E613B2005B216E /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F673826E613B2005B216E /* PageVC.swift */; };
 		2D4F673C26E613FE005B216E /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F673B26E613FE005B216E /* ImageVC.swift */; };
+		2D7041FB2701DF2A00A30F8C /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7041FA2701DF2A00A30F8C /* TextView.swift */; };
 		2D79672826F5E8E900B74419 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79672726F5E8E900B74419 /* MenuViewController.swift */; };
 		2D9FD07826EF7BE300335B7B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FD07726EF7BE300335B7B /* Authorization.swift */; };
 		2DA72AD826F6621900A532FA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72AD726F6621900A532FA /* TabBarController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		2D4F673826E613B2005B216E /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		2D4F673B26E613FE005B216E /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		2D7041FA2701DF2A00A30F8C /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		2D79672726F5E8E900B74419 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2D9FD07726EF7BE300335B7B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		2DA72AD726F6621900A532FA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				2DC4CB222700901A00C42411 /* PageControll.swift */,
 				2DC4CB292700931B00C42411 /* Text.swift */,
+				2D7041FA2701DF2A00A30F8C /* TextView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				2DA72AD826F6621900A532FA /* TabBarController.swift in Sources */,
 				2D4F673C26E613FE005B216E /* ImageVC.swift in Sources */,
 				2D79672826F5E8E900B74419 /* MenuViewController.swift in Sources */,
+				2D7041FB2701DF2A00A30F8C /* TextView.swift in Sources */,
 				2DD544EF26E12DAB00262BDA /* WelcomeViewController.swift in Sources */,
 				2DC4CB2A2700931B00C42411 /* Text.swift in Sources */,
 				2DD544EB26E12DAB00262BDA /* AppDelegate.swift in Sources */,
