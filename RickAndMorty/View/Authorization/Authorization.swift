@@ -14,7 +14,6 @@ class Authorization: UIViewController {
   @IBOutlet var stackViewPassword: UIStackView!
   @IBOutlet var stackViewLogin: UIStackView!
 
-
   override func viewDidLoad() {
     super.viewDidLoad()
     errorLabel.isHidden = true
@@ -53,7 +52,10 @@ class Authorization: UIViewController {
     present(mainBurgerVC, animated: true)
   }
   func alertLogin() {
-    let alertController = UIAlertController(title: "Error", message: "Incorrect Login or Password", preferredStyle: .alert)
+    let alertController = UIAlertController(
+      title: "Error",
+      message: "Incorrect Login or Password",
+      preferredStyle: .alert)
     let okey = UIAlertAction(title: "Ok", style: .default)
     alertController.addAction(okey)
     present(alertController, animated: true)
@@ -71,11 +73,4 @@ class Authorization: UIViewController {
     passwordTF.rightView = showPasswordButton
     passwordTF.rightViewMode = .always
   }
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    loginTF.resignFirstResponder()
-    passwordTF.resignFirstResponder()
-    return true
-  }
-}
-extension Authorization: UITextFieldDelegate {
 }

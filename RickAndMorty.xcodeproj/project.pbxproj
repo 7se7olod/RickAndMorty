@@ -10,6 +10,7 @@
 		2D4F673926E613B2005B216E /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F673826E613B2005B216E /* PageVC.swift */; };
 		2D4F673C26E613FE005B216E /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F673B26E613FE005B216E /* ImageVC.swift */; };
 		2D7041FB2701DF2A00A30F8C /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7041FA2701DF2A00A30F8C /* TextView.swift */; };
+		2D7041FE2703058200A30F8C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7041FD2703058200A30F8C /* TextField.swift */; };
 		2D79672826F5E8E900B74419 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79672726F5E8E900B74419 /* MenuViewController.swift */; };
 		2D9FD07826EF7BE300335B7B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FD07726EF7BE300335B7B /* Authorization.swift */; };
 		2DA72AD826F6621900A532FA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72AD726F6621900A532FA /* TabBarController.swift */; };
@@ -32,6 +33,7 @@
 		2D4F673826E613B2005B216E /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		2D4F673B26E613FE005B216E /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		2D7041FA2701DF2A00A30F8C /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		2D7041FD2703058200A30F8C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		2D79672726F5E8E900B74419 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2D9FD07726EF7BE300335B7B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		2DA72AD726F6621900A532FA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -66,9 +68,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D7042002703058B00A30F8C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2D7041FD2703058200A30F8C /* TextField.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		2D71662D26EF7DDB00D298DC /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				2D7042002703058B00A30F8C /* Extension */,
 				2D9FD07726EF7BE300335B7B /* Authorization.swift */,
 			);
 			path = Authorization;
@@ -301,6 +312,7 @@
 				2DA72ADB26F730C100A532FA /* CharacterViewController.swift in Sources */,
 				2DD544F526E12DAB00262BDA /* RickAndMorty.xcdatamodeld in Sources */,
 				2DD7704726F3624600248941 /* MainBurgerViewController.swift in Sources */,
+				2D7041FE2703058200A30F8C /* TextField.swift in Sources */,
 				2DA72ADE26F7310C00A532FA /* LocationViewController.swift in Sources */,
 				2DC4CB232700901A00C42411 /* PageControll.swift in Sources */,
 				2D4F673926E613B2005B216E /* PageVC.swift in Sources */,
