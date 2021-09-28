@@ -40,6 +40,7 @@ class Authorization: UIViewController {
   }
   @IBAction func loginAction(_ sender: UIButton) {
     guard loginTF.text == fakeEnter && passwordTF.text == fakeEnter else {
+      alertLogin()
       errorLabel.isHidden = false
       errorLabel.textColor = .red
       loginTF.tintColor = .red
@@ -51,7 +52,12 @@ class Authorization: UIViewController {
     let mainBurgerVC = storyboard.instantiateViewController(identifier: "NavigationController")
     present(mainBurgerVC, animated: true)
   }
-
+  func alertLogin() {
+    let alertController = UIAlertController(title: "Error", message: "Incorrect Login or Password", preferredStyle: .alert)
+    let okey = UIAlertAction(title: "Ok", style: .default)
+    alertController.addAction(okey)
+    present(alertController, animated: true)
+  }
   func showPasswordButtonSetting() {
     showPasswordButton.setImage(showPasswordImage, for: .normal)
     showPasswordButton.addTarget(self, action: #selector(showPassword), for: .touchUpInside)
