@@ -1,6 +1,6 @@
 import UIKit
 
-class LocationViewController: UIViewController {
+class DetailCharacterTVC: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
   }

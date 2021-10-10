@@ -48,7 +48,7 @@ class Authorization: UIViewController {
       return
     }
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let mainBurgerVC = storyboard.instantiateViewController(identifier: "NavigationController")
+    let mainBurgerVC = storyboard.instantiateViewController(identifier: "TabBarController")
     present(mainBurgerVC, animated: true)
   }
   func alertLogin() {
