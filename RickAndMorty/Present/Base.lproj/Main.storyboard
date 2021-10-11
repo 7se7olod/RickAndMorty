@@ -623,7 +623,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" text="" id="TdT-9m-mYw">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.12962913509999999" green="0.80447828769999996" blue="0.90520876650000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
@@ -695,7 +695,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPq-b1-R8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2057.971014492754" y="932.8125"/>
+            <point key="canvasLocation" x="955" y="950"/>
         </scene>
         <!--Locations-->
         <scene sceneID="ZQF-Na-P0b">
@@ -747,7 +747,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDp-Wi-7mn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3850.7246376811595" y="932.8125"/>
+            <point key="canvasLocation" x="2638" y="950"/>
         </scene>
         <!--Episodes-->
         <scene sceneID="htg-tT-sIg">
@@ -810,7 +810,106 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSh-1l-914" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5797.1014492753629" y="932.8125"/>
+            <point key="canvasLocation" x="4326" y="950"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="fP5-Zi-a7w">
+            <objects>
+                <viewController id="QUF-Ci-2oe" customClass="Statistics" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vgh-XZ-Jeb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In App Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQz-h6-lLy">
+                                <rect key="frame" x="141" y="62" width="132" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 00 00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTr-g0-Qr0">
+                                <rect key="frame" x="147" y="231" width="120" height="351"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="351" id="bwl-7E-leR"/>
+                                    <constraint firstAttribute="width" constant="120" id="i7f-Qb-8nz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <color key="textColor" red="0.0" green="0.69803921570000005" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bwl-7E-leR"/>
+                                        <exclude reference="i7f-Qb-8nz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="bwl-7E-leR"/>
+                                        <include reference="i7f-Qb-8nz"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L13-jm-6SM">
+                                <rect key="frame" x="161.5" y="626" width="91" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Reset Time">
+                                    <color key="titleColor" red="0.0" green="0.69803921570000005" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTimer:" destination="QUF-Ci-2oe" eventType="touchUpInside" id="uFg-oU-heC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JNz-zb-S6Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L13-jm-6SM" firstAttribute="top" secondItem="fTr-g0-Qr0" secondAttribute="bottom" constant="31.5" id="23w-x6-hhj"/>
+                            <constraint firstItem="L13-jm-6SM" firstAttribute="centerX" secondItem="fTr-g0-Qr0" secondAttribute="centerX" id="8uX-aw-szl"/>
+                            <constraint firstItem="bQz-h6-lLy" firstAttribute="centerX" secondItem="Vgh-XZ-Jeb" secondAttribute="centerX" id="DDg-Gn-4wR"/>
+                            <constraint firstItem="bQz-h6-lLy" firstAttribute="top" secondItem="JNz-zb-S6Z" secondAttribute="top" constant="18" id="NJt-Eo-KGI"/>
+                            <constraint firstItem="fTr-g0-Qr0" firstAttribute="centerX" secondItem="Vgh-XZ-Jeb" secondAttribute="centerX" id="TN9-BR-Fae"/>
+                            <constraint firstItem="fTr-g0-Qr0" firstAttribute="centerX" secondItem="Vgh-XZ-Jeb" secondAttribute="centerX" id="VTv-24-9E5"/>
+                            <constraint firstItem="fTr-g0-Qr0" firstAttribute="centerY" secondItem="Vgh-XZ-Jeb" secondAttribute="centerY" id="ZQa-Lz-BEm"/>
+                            <constraint firstItem="fTr-g0-Qr0" firstAttribute="centerY" secondItem="Vgh-XZ-Jeb" secondAttribute="centerY" id="bqJ-4k-86T"/>
+                            <constraint firstItem="L13-jm-6SM" firstAttribute="top" secondItem="fTr-g0-Qr0" secondAttribute="bottom" constant="44" id="n9x-pD-MIj"/>
+                            <constraint firstItem="L13-jm-6SM" firstAttribute="centerX" secondItem="fTr-g0-Qr0" secondAttribute="centerX" id="xsv-d8-k6f"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TN9-BR-Fae"/>
+                                <exclude reference="VTv-24-9E5"/>
+                                <exclude reference="ZQa-Lz-BEm"/>
+                                <exclude reference="bqJ-4k-86T"/>
+                                <exclude reference="23w-x6-hhj"/>
+                                <exclude reference="8uX-aw-szl"/>
+                                <exclude reference="n9x-pD-MIj"/>
+                                <exclude reference="xsv-d8-k6f"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="TN9-BR-Fae"/>
+                                <include reference="ZQa-Lz-BEm"/>
+                                <include reference="23w-x6-hhj"/>
+                                <include reference="8uX-aw-szl"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="VTv-24-9E5"/>
+                                <include reference="bqJ-4k-86T"/>
+                                <include reference="n9x-pD-MIj"/>
+                                <include reference="xsv-d8-k6f"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="stat" id="etw-Bb-4rq"/>
+                    <connections>
+                        <outlet property="secondsLabel" destination="fTr-g0-Qr0" id="h5m-Um-1zj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w25-Dq-x9i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5268" y="950"/>
         </scene>
         <!--Detail CharacterTVC-->
         <scene sceneID="chf-7M-V6H">
@@ -1039,7 +1138,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Otx-ul-QO1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581" y="1620"/>
+            <point key="canvasLocation" x="671" y="1728"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iyh-JS-Jal">
@@ -1058,6 +1157,7 @@
                         <segue destination="WmM-1n-x5L" kind="relationship" relationship="viewControllers" id="wsL-2F-JuG"/>
                         <segue destination="13e-KA-E0Y" kind="relationship" relationship="viewControllers" id="mV3-Wo-kV4"/>
                         <segue destination="dCv-L7-3ra" kind="relationship" relationship="viewControllers" id="8z1-Wu-UOS"/>
+                        <segue destination="QUF-Ci-2oe" kind="relationship" relationship="viewControllers" id="j2F-TH-QJW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7w-7c-sat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1164,7 +1264,7 @@ The Rick and Morty API is filled with canonical information as seen on the TV sh
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhT-6d-dVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1147.8260869565217" y="932.8125"/>
+            <point key="canvasLocation" x="233" y="950"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zux-9l-Cbw">
@@ -1184,7 +1284,7 @@ The Rick and Morty API is filled with canonical information as seen on the TV sh
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuO-pt-VKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2940.579710144928" y="932.8125"/>
+            <point key="canvasLocation" x="1893" y="950"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LUc-rR-kt7">
@@ -1204,7 +1304,7 @@ The Rick and Morty API is filled with canonical information as seen on the TV sh
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFp-76-JWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4886.9565217391309" y="932.8125"/>
+            <point key="canvasLocation" x="3581" y="950"/>
         </scene>
     </scenes>
     <resources>
@@ -1216,6 +1316,7 @@ The Rick and Morty API is filled with canonical information as seen on the TV sh
         <image name="img1" width="1000" height="500"/>
         <image name="location" width="17" height="24"/>
         <image name="no-favorite" width="24" height="23"/>
+        <image name="stat" width="20" height="20"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
