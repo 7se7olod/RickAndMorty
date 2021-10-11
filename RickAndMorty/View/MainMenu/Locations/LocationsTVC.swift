@@ -1,10 +1,10 @@
 import UIKit
 
 class LocationsTVC: UITableViewController {
-  let networkService = NetworkServiceLocation()
+  let location: Locations? = nil
   override func viewDidLoad() {
     super.viewDidLoad()
-    networkService.request(urlString: urlStringLocation) { [weak self] result in
+    networkService.request(res: location, urlString: urlStringLocation) { [weak self] result in
       switch result {
       case .success(let welcome):
       modelLocation = welcome

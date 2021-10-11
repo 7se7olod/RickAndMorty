@@ -1,10 +1,10 @@
 import UIKit
 
 class EpisodesTVC: UITableViewController {
-  let networkService = NetworkServiceEpisode()
+  let episode: Episodes? = nil
   override func viewDidLoad() {
     super.viewDidLoad()
-    networkService.request(urlString: urlStringEpisode) { [weak self] result in
+    networkService.request(res: episode, urlString: urlStringEpisode) { [weak self] result in
       switch result {
       case .success(let welcome):
       modelEpisode = welcome

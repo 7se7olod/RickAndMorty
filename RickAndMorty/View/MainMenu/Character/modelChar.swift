@@ -1,6 +1,12 @@
 import Foundation
-let urlStringCharacter = "https://rickandmortyapi.com/api/character"
+
 var modelChar: Characters?
+
+enum DataRM {
+  case characters
+  case locations
+  case episodes
+}
 
 struct Characters: Codable {
   let results: [ResultCharacter]

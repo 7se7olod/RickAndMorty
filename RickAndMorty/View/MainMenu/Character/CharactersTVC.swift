@@ -1,20 +1,20 @@
 import UIKit
 
 class CharactersTVC: UITableViewController {
-  let networkService = NetworkService()
   @IBOutlet var searchBar: UISearchBar!
+  let character: Characters? = nil
   override func viewDidLoad() {
     super.viewDidLoad()
-networkService.request(urlString: urlStringCharacter) { [weak self] result in
-switch result {
-case .success(let welcome):
-modelChar = welcome
-self?.tableView.reloadData()
-case .failure(let error):
-print("Error:", error)
+    networkService.request(res: character, urlString: urlStringCharacter) { [weak self] result in
+     switch result {
+     case .success(let welcome):
+     modelChar = welcome
+     self?.tableView.reloadData()
+     case .failure(let error):
+     print("Error:", error)
+     }
+    }
   }
-}
-}
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return modelChar?.results.count ?? 1
