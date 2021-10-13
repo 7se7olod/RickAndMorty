@@ -61,16 +61,16 @@ class Authorization: UIViewController {
     present(alertController, animated: true)
   }
   func showPasswordButtonSetting() {
-    showPasswordButton.setImage(showPasswordImage, for: .normal)
-    showPasswordButton.addTarget(self, action: #selector(showPassword), for: .touchUpInside)
-    showPasswordButton.sizeToFit()
-    showPasswordButton.tintColor = .darkGray
+    self.showPasswordButton.setImage(self.showPasswordImage, for: .normal)
+    self.showPasswordButton.addTarget(self, action: #selector(showPassword), for: .touchUpInside)
+    self.showPasswordButton.sizeToFit()
+    self.showPasswordButton.tintColor = .darkGray
   }
   @objc func showPassword() {
     passwordTF.isSecureTextEntry.toggle()
   }
   func passwordFieldButton() {
-    passwordTF.rightView = showPasswordButton
+    passwordTF.rightView = self.showPasswordButton
     passwordTF.rightViewMode = .always
   }
 }

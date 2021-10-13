@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xd1-PJ-cVv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,7 +11,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -612,7 +612,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n69-TX-Wrg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2771" y="-575"/>
+            <point key="canvasLocation" x="2396" y="-863"/>
         </scene>
         <!--Characters-->
         <scene sceneID="N0X-kg-VPw">
@@ -623,7 +623,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" text="" id="TdT-9m-mYw">
-                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.12962913509999999" green="0.80447828769999996" blue="0.90520876650000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
@@ -695,7 +695,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPq-b1-R8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955" y="950"/>
+            <point key="canvasLocation" x="4775" y="-1178"/>
         </scene>
         <!--Locations-->
         <scene sceneID="ZQF-Na-P0b">
@@ -743,11 +743,41 @@
                             <outlet property="delegate" destination="LLW-QY-fIQ" id="hED-dA-F5b"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="9UU-5i-dIC"/>
                     <navigationItem key="navigationItem" title="Locations" id="8nH-v5-qhG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDp-Wi-7mn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2638" y="950"/>
+            <point key="canvasLocation" x="4799" y="-435"/>
+        </scene>
+        <!--FavouritesTVC-->
+        <scene sceneID="6BN-Nx-bTA">
+            <objects>
+                <tableViewController id="r4S-mD-Com" customClass="FavouritesTVC" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cqF-zc-Lef">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteCell" id="xee-FN-OIu">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xee-FN-OIu" id="Cvv-w7-EZX" customClass="FavouriteViewCell" customModule="RickAndMorty" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="r4S-mD-Com" id="hBh-Uw-evd"/>
+                            <outlet property="delegate" destination="r4S-mD-Com" id="pE9-Ef-w1n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="68G-UC-LHh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQE-M9-UVH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4868" y="252"/>
         </scene>
         <!--Episodes-->
         <scene sceneID="htg-tT-sIg">
@@ -810,7 +840,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSh-1l-914" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4326" y="950"/>
+            <point key="canvasLocation" x="4799" y="962"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="fP5-Zi-a7w">
@@ -909,7 +939,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w25-Dq-x9i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5268" y="950"/>
+            <point key="canvasLocation" x="4054" y="1696"/>
         </scene>
         <!--Detail CharacterTVC-->
         <scene sceneID="chf-7M-V6H">
@@ -1138,26 +1168,27 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Otx-ul-QO1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="1728"/>
+            <point key="canvasLocation" x="529" y="850"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iyh-JS-Jal">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xd1-PJ-cVv" customClass="TabBarController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5nl-mF-m4x"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="P5f-FF-GYK">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="P5f-FF-GYK" customClass="TabBar" customModule="RickAndMorty" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.12962913509999999" green="0.80447828769999996" blue="0.90520876650000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="3.1886622764432104e-07" green="0.69644397497177124" blue="0.84051614999771118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.99569755790000003" green="0.99727398160000003" blue="0.2025251985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WmM-1n-x5L" kind="relationship" relationship="viewControllers" id="wsL-2F-JuG"/>
-                        <segue destination="13e-KA-E0Y" kind="relationship" relationship="viewControllers" id="mV3-Wo-kV4"/>
-                        <segue destination="dCv-L7-3ra" kind="relationship" relationship="viewControllers" id="8z1-Wu-UOS"/>
-                        <segue destination="QUF-Ci-2oe" kind="relationship" relationship="viewControllers" id="j2F-TH-QJW"/>
+                        <segue destination="WmM-1n-x5L" kind="relationship" relationship="viewControllers" id="Yx5-Jf-wWY"/>
+                        <segue destination="13e-KA-E0Y" kind="relationship" relationship="viewControllers" id="lgC-8k-BT8"/>
+                        <segue destination="UOU-kk-pbU" kind="relationship" relationship="viewControllers" id="Q3U-Wl-4QU"/>
+                        <segue destination="dCv-L7-3ra" kind="relationship" relationship="viewControllers" id="mNg-kJ-evj"/>
+                        <segue destination="QUF-Ci-2oe" kind="relationship" relationship="viewControllers" id="GHe-tj-bl3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7w-7c-sat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1244,7 +1275,7 @@ The Rick and Morty API is filled with canonical information as seen on the TV sh
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yn-Wo-MOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1984" y="-575"/>
+            <point key="canvasLocation" x="1609" y="-863"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q83-8F-bZD">
@@ -1264,7 +1295,7 @@ The Rick and Morty API is filled with canonical information as seen on the TV sh
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhT-6d-dVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="950"/>
+            <point key="canvasLocation" x="4054" y="-1179"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zux-9l-Cbw">
@@ -1284,7 +1315,7 @@ The Rick and Morty API is filled with canonical information as seen on the TV sh
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuO-pt-VKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893" y="950"/>
+            <point key="canvasLocation" x="4054" y="-435"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LUc-rR-kt7">
@@ -1304,7 +1335,27 @@ The Rick and Morty API is filled with canonical information as seen on the TV sh
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFp-76-JWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3581" y="950"/>
+            <point key="canvasLocation" x="4054" y="962"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hpd-eP-lQP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UOU-kk-pbU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="2aZ-tH-Iyi"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8MH-m7-NSs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="3.1886622764432104e-07" green="0.69644397497177124" blue="0.84051614999771118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r4S-mD-Com" kind="relationship" relationship="rootViewController" id="fCx-Xq-8t4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8V-MW-OUW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4054" y="253"/>
         </scene>
     </scenes>
     <resources>

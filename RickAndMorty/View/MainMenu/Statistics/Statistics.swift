@@ -15,7 +15,7 @@ class Statistics: UIViewController {
   }
   @IBAction func resetTimer(_ sender: UIButton) {
     let alert = UIAlertController(title: "Reset time", message: "Do you want to reset time?", preferredStyle: .alert)
-    let yesAction = UIAlertAction(title: "YES", style: .default) { (_) in
+    let yesAction = UIAlertAction(title: "YES", style: .default) { _ in
       self.seconds = 0
       self.secondsLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
     }

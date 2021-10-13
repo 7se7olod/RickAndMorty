@@ -6,15 +6,15 @@ class CharactersTVC: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     networkService.request(res: character, urlString: urlStringCharacter) { [weak self] result in
-     switch result {
-     case .success(let welcome):
-     modelChar = welcome
-     self?.tableView.reloadData()
-     case .failure(let error):
-     print("Error:", error)
-     }
+    switch result {
+    case .success(let welcome):
+    modelChar = welcome
+    self?.tableView.reloadData()
+    case .failure(let error):
+    print("Error:", error)
     }
-  }
+    }
+}
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return modelChar?.results.count ?? 1
