@@ -1,6 +1,7 @@
 import UIKit
 
 class Authorization: UIViewController {
+  var window: UIWindow?
   private let fakeEnter = "Test"
   var rightButton = UIButton(type: .custom)
   let showPasswordButton = UIButton(type: .custom)
@@ -12,7 +13,6 @@ class Authorization: UIViewController {
   @IBOutlet var errorLabel: UILabel!
   @IBOutlet var stackViewPassword: UIStackView!
   @IBOutlet var stackViewLogin: UIStackView!
-
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -39,6 +39,7 @@ class Authorization: UIViewController {
   }
   @IBAction func loginAction(_ sender: UIButton) {
     guard loginTF.text == fakeEnter && passwordTF.text == fakeEnter else {
+      alertLogin()
       errorLabel.isHidden = false
       errorLabel.textColor = .red
       loginTF.tintColor = .red
@@ -46,27 +47,30 @@ class Authorization: UIViewController {
       passwordTF.textColor = .red
       return
     }
-    performSegue(withIdentifier: "LoginToTableView", sender: self)
-    }
-
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let mainBurgerVC = storyboard.instantiateViewController(identifier: "TabBarController")
+    present(mainBurgerVC, animated: true)
+  }
+  func alertLogin() {
+    let alertController = UIAlertController(
+      title: "Error",
+      message: "Incorrect Login or Password",
+      preferredStyle: .alert)
+    let okey = UIAlertAction(title: "Ok", style: .default)
+    alertController.addAction(okey)
+    present(alertController, animated: true)
+  }
   func showPasswordButtonSetting() {
-    showPasswordButton.setImage(showPasswordImage, for: .normal)
-    showPasswordButton.addTarget(self, action: #selector(showPassword), for: .touchUpInside)
-    showPasswordButton.sizeToFit()
-    showPasswordButton.tintColor = .darkGray
+    self.showPasswordButton.setImage(self.showPasswordImage, for: .normal)
+    self.showPasswordButton.addTarget(self, action: #selector(showPassword), for: .touchUpInside)
+    self.showPasswordButton.sizeToFit()
+    self.showPasswordButton.tintColor = .darkGray
   }
   @objc func showPassword() {
     passwordTF.isSecureTextEntry.toggle()
   }
   func passwordFieldButton() {
-    passwordTF.rightView = showPasswordButton
+    passwordTF.rightView = self.showPasswordButton
     passwordTF.rightViewMode = .always
   }
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    loginTF.resignFirstResponder()
-    passwordTF.resignFirstResponder()
-    return true
-  }
-}
-extension Authorization: UITextFieldDelegate {
 }

@@ -1,12 +1,17 @@
 import UIKit
 
 class ImageVC: UIViewController {
-  @IBOutlet var showImage: UIImageView!
-  var displayImage: UIImage?
+  @IBOutlet var headerLabel: UILabel!
+  @IBOutlet var descriptionText: UITextView!
   var index: Int?
   override func viewDidLoad() {
     super.viewDidLoad()
-    showImage.contentMode = .scaleAspectFit
-    showImage.image = displayImage
+    if index != nil {
+      headerLabel.text = headerText[index ?? 0]
+      descriptionText.addHyperLinksToText(
+        originalText: fullDescriptionText[index ?? 0],
+        hyperLinks: hyperLinks[index ?? 0])
+    }
+    view.layer.cornerRadius = 10
   }
 }
