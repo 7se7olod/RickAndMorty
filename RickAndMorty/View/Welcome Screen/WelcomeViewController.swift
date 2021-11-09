@@ -11,8 +11,8 @@ class WelcomeViewController: UIViewController {
     view.backgroundColor = .white
     pageControl.numberOfPages = headerText.count
     pageControl.backgroundColor = .white
-    pageControl.preferredIndicatorImage = UIImage(named: "page dot 2")
-    pageControl.setIndicatorImage(UIImage(named: "page dot 1"), forPage: 0)
+    pageControl.preferredIndicatorImage = dot2
+    pageControl.setIndicatorImage(dot1, forPage: 0)
     startPresentation()
   }
 func startPresentation() {

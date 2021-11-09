@@ -29,15 +29,16 @@ class NetworkService {
       .resume()
     }
 
-  func setImage(strImage: String, cell: CharacterCell) {
+  func setImage(strImage: String, image: UIImageView) -> UIImage {
     if let urlImage = URL(string: strImage) {
       let task = URLSession.shared.dataTask(with: urlImage) { data, _, _ in
         guard let data = data else { return }
         DispatchQueue.main.async {
-          cell.characterImage.image = UIImage(data: data)
+          image.image = UIImage(data: data)
         }
       }
       task.resume()
     }
+    return image.image ?? UIImage()
   }
 }

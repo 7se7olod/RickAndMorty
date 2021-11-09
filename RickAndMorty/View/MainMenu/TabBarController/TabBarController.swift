@@ -4,45 +4,54 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
   required init?(coder: NSCoder) {
     super.init(coder: coder)
   }
+  // иконки для кнопки
+  private let unselectedFavouriteButton = UIImage(named: "heart")
+  private let selectedFavouriteButton = UIImage(named: "favouriteTapped")
+  private let circleFavouriteButton = UIImage(named: "circleFill")
 
-  private lazy var middleButton = UIButton()
+  private let diametrButton: CGFloat = 60 // диаметр копки
+  private lazy var middleButton: UIButton = {
+    let middleButton = UIButton()
+    middleButton.layer.cornerRadius = diametrButton / 2
+    middleButton.setBackgroundImage(circleFavouriteButton, for: .normal)
+    middleButton.setImage(unselectedFavouriteButton, for: .normal)
+    middleButton.translatesAutoresizingMaskIntoConstraints = false
+    middleButton.addTarget(self, action: #selector(menuButtonAction), for: .touchUpInside)
+    self.view.layoutIfNeeded()
+    return middleButton
+  }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     tabBar.unselectedItemTintColor = .white
     self.delegate = self
-    setupMiddleButton()
-    tappedColor()
+    makeUI()
   }
 
+  // Настройка констрейнтов кнопки
+  private func makeUI() {
+    tabBar.addSubview(middleButton)
+    NSLayoutConstraint.activate([
+      middleButton.heightAnchor.constraint(equalToConstant: diametrButton),
+      middleButton.widthAnchor.constraint(equalToConstant: diametrButton),
+      middleButton.centerXAnchor.constraint(equalTo: tabBar.centerXAnchor),
+      middleButton.centerYAnchor.constraint(equalTo: tabBar.topAnchor, constant: -7)
+    ])
+  }
+
+  // смена цвета кнопки при переключении
   private func tappedColor() {
-    if selectedIndex == 2 {
-      middleButton.setImage(UIImage(named: "favouriteTapped"), for: .normal)
+    if self.selectedIndex != 2 {
+      middleButton.setImage(unselectedFavouriteButton, for: .normal)
     } else {
-      middleButton.setImage(UIImage(named: "heart"), for: .normal)
+      middleButton.setImage(selectedFavouriteButton, for: .normal)
     }
   }
-
-  private func setupMiddleButton() {
-    middleButton = UIButton(
-      frame: CGRect(
-        x: (self.view.bounds.width / 2) - 30,
-        y: -37,
-        width: 60,
-        height: 60))
-    middleButton.setBackgroundImage(UIImage(named: "circleFill"), for: .normal)
-    //    middleButton.setImage(UIImage(named: "heart"), for: .normal)
-    self.tabBar.addSubview(middleButton)
-    middleButton.addTarget(self, action: #selector(menuButtonAction), for: .touchUpInside)
-    middleButton.addTarget(self, action: #selector(changeColor), for: .touchDown)
-    self.view.layoutIfNeeded()
-  }
-
   @objc private func menuButtonAction(sender: UIButton) {
     self.selectedIndex = 2
     tappedColor()
   }
-  @objc private func changeColor(sender: UIButton) {
+  func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
     tappedColor()
   }
 }

@@ -44,7 +44,6 @@ class TabBar: UITabBar {
     return path.cgPath
   }
 
-
   override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
     let pointIsInside = super.point(inside: point, with: event)
     if pointIsInside == false {

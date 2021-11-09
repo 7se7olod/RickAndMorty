@@ -41,3 +41,9 @@ enum Species: String, Codable {
   case alien = "Alien"
   case human = "Human"
 }
+
+enum Status: String {
+  case alive = "•Alive"
+  case dead = "•Dead"
+  case unknown = "•unknown"
+}
